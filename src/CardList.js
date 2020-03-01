@@ -25,7 +25,7 @@ const CardList = ({robots})=>{
             })
     return(
         <div className='container'>
-            <div className="row g-5 justify-content-center align-items-center">
+            <div className="row g-4 justify-content-center align-items-center">
                 { cardComp }
             </div>
         </div>
