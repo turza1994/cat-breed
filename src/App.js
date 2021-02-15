@@ -14,8 +14,8 @@ class App extends Component{
         this.state = {
             robots: [],
             filteredRobots: [],
-            color1: '#ff3300',
-            color2: '#ffac4d'
+            color1: 'rgb(235,230,230)',
+            color2: 'rgb(255,204,204)'
         }
 
         this.onSearchChange = this.onSearchChange.bind(this);
