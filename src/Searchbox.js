@@ -6,9 +6,9 @@ class Searchbox extends Component{
         return(
             <div>
                 <input 
-                className="input-reset ba b--black-20 pa2 mb2 w-30 tc"
+                className="input-reset ba b--black-20 pa2 mb2 w-100 tc"
                 type = "search"
-                placeholder="Search for robots"
+                placeholder="Search for breed name"
                 onChange={onSearchChange}
                 />
             </div>

@@ -30,7 +30,7 @@ class App extends Component{
         .then(response => response.json())
         .then((json) => {
             this.setState({robots: json, filteredRobots: json});
-
+            console.log(json)
         //   this.state.robots.map(element => console.log(element.image.url))
             // console.log(typeof(json[0].image.url))
         });
@@ -78,14 +78,17 @@ class App extends Component{
     render(){
         
         return(
-            <div className="App tc" style={{background: `linear-gradient(to left, ${this.state.color1} , ${this.state.color2})`}} >
-                <header>
-                    <h1 className="f1 fw9 b">Robo Friends</h1>
+            <div className="App tc" style={{background: `linear-gradient(to left, ${this.state.color1} , ${this.state.color2})`, marginTop: "-32px"}} >
+                <header className="flex justify-around items-end pt4 pb1">
+                    <h3 className="f1 fw9 b">Cat Friends</h3>
                     <Searchbox searchChange = { this.onSearchChange } />
-                    <h3>Change Background Color ?</h3>
-                    <ColorPicker onColorChange = {this.onColorChange1} color = {this.state.color1} />
-                    <ColorPicker onColorChange = {this.onColorChange2} color = {this.state.color2} />
-                    <RandomColor onClickRandomColor = {this.onClickRandomColor} />
+                    {/* <h3>Change Background Color ?</h3> */}
+                    <div>
+                        <ColorPicker onColorChange = {this.onColorChange1} color = {this.state.color1} />
+                        <ColorPicker onColorChange = {this.onColorChange2} color = {this.state.color2} />
+                        <RandomColor onClickRandomColor = {this.onClickRandomColor} />
+                    </div>
+                    
                 </header>
                 <Scroll>
                     <CardList robots={this.state.filteredRobots} />
