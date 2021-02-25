@@ -3,7 +3,6 @@ import CardList from './CardList';
 import Searchbox from './Searchbox';
 import ColorPicker from './ColorPicker';
 import RandomColor from './RandomColor';
-import Scroll from './Scroll';
 import './App.css';
 
 import React, { Component } from 'react';
