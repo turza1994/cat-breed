@@ -24,8 +24,10 @@ const CardList = ({robots})=>{
                 );
             })
     return(
-        <div className='CardList ph5'>
-            { cardComp }
+        <div className='container'>
+            <div className="row g-5 justify-content-center align-items-center">
+                { cardComp }
+            </div>
         </div>
     );
 }

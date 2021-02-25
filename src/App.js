@@ -78,21 +78,21 @@ class App extends Component{
     render(){
         
         return(
-            <div className="App tc" style={{background: `linear-gradient(to left, ${this.state.color1} , ${this.state.color2})`, marginTop: "-32px"}} >
-                <header className="flex justify-around items-end pt4 pb1">
+            <div className="App container-fluid tc" style={{background: `linear-gradient(to left, ${this.state.color1} , ${this.state.color2})`}} >
+                <header className="d-flex flex-column flex-md-row justify-content-around align-items-center py-4 mb-5">
                     <h3 className="f1 fw9 b">Cat Friends</h3>
                     <Searchbox searchChange = { this.onSearchChange } />
                     {/* <h3>Change Background Color ?</h3> */}
-                    <div>
-                        <ColorPicker onColorChange = {this.onColorChange1} color = {this.state.color1} />
-                        <ColorPicker onColorChange = {this.onColorChange2} color = {this.state.color2} />
+                    <div className="d-flex justify-content-center align-items-center">
+                        <div className="pt-3">
+                            <ColorPicker onColorChange = {this.onColorChange1} color = {this.state.color1} />
+                            <ColorPicker onColorChange = {this.onColorChange2} color = {this.state.color2} />
+                        </div>
                         <RandomColor onClickRandomColor = {this.onClickRandomColor} />
                     </div>
                     
                 </header>
-                <Scroll>
                     <CardList robots={this.state.filteredRobots} />
-                </Scroll>
             </div>
         );
         
