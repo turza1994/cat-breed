@@ -13,7 +13,7 @@ class App extends Component{
         this.state = {
             robots: [],
             filteredRobots: [],
-            color1: 'rgb(235,230,230)',
+            color1: 'rgb(235,230,231)',
             color2: 'rgb(255,204,204)'
         }
 
